@@ -1,0 +1,89 @@
+﻿@model CareerSolutionsLib.Company
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.compName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compBranch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compBranch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.oompPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.oompPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compPassword)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
